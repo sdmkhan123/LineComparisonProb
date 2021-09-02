@@ -10,7 +10,7 @@ namespace LineComparisonProb
             int x12 = Convert.ToInt32(Console.ReadLine());
             int y11 = Convert.ToInt32(Console.ReadLine());
             int y12 = Convert.ToInt32(Console.ReadLine());
-            return Math.Sqrt(Math.Pow(x12 - x11, 2) + Math.Pow(y12 - y11, 2) * 1.0);
+            return Math.Sqrt(Math.Pow(x12 - x11, 2) + Math.Pow(y12 - y11, 2));
         }
         static void Main(string[] args)
         {
@@ -21,9 +21,13 @@ namespace LineComparisonProb
             {
                 Console.WriteLine("Both lines have equal length");
             }
+            else if (lengthOfLineFirst > lengthOfLineSecond)
+            {
+                Console.WriteLine("Length of First line is greater than length of second line");
+            }
             else
             {
-                Console.WriteLine("Both lines are not equal length");
+                Console.WriteLine("Length of First line is less than length of second line");
             }
         }
     }
