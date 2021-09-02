@@ -15,8 +15,16 @@ namespace LineComparisonProb
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program on Master Branch");
-            double lineLength = lengthOfLine();
-            Console.WriteLine("Length of line between two point is " + lineLength);
+            double lengthOfLineFirst = lengthOfLine();
+            double lengthOfLineSecond = lengthOfLine();
+            if (lengthOfLineFirst == lengthOfLineSecond)
+            {
+                Console.WriteLine("Both lines have equal length");
+            }
+            else
+            {
+                Console.WriteLine("Both lines are not equal length");
+            }
         }
     }
 }
